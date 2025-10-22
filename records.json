@@ -1,0 +1,20 @@
+{
+  "records": [
+    {
+      "title": "2025년 10월 22일 금딸 선언 1호",
+      "start": "2025-10-22T17:34:00+09:00",
+      "end": "",
+      "failed": false,
+      "description": "아파요. 이제는 좀 절제해야될거같습니다. "
+    },
+    {
+      "title": "THIS IS TITLE",
+      "start": "",
+      "end": "",
+      "failed": false,
+      "failureReason": "",
+      "description": "THIS IS TEMPLATE JSON. OVERWRITE THIS. ",
+      "template": true
+    }
+  ]
+}

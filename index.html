@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>금딸 챌린지 기록 웹사이트</title>
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>금딸 챌린지 기록 웹사이트</h1>
+    <p class="tagline">욕망을 다스린 시간과 넘어졌던 순간까지 세밀하게 기록하며 성장의 궤적을 기록해보자!</p>
+  </header>
+
+  <main>
+    <section class="panel motivation" aria-labelledby="motivation-title">
+      <h2 id="motivation-title">금딸을 결심한 이유</h2>
+      <p>
+        매일 수번을 반복하다 보니 어느 정도 몸이 지치게 되었고, 나중을 위하여 정기를 축적하며 건강한 루틴을
+        되찾고자 금딸을 시작했습니다.
+      </p>
+      <p class="motivation-link">
+        더 많은 정보가 궁금하다면
+        <a href="https://namu.wiki/w/%EA%B8%88%EB%94%B8" target="_blank" rel="noopener noreferrer">금딸 위키 문서</a>를
+        살펴보세요.
+      </p>
+    </section>
+
+    <section class="panel current-status" aria-labelledby="current-status-title">
+      <div class="panel-header">
+        <h2 id="current-status-title">현재 진행 중인 금딸 챌린지</h2>
+      </div>
+      <p class="helper-text">웹사이트 주인장이 현재 진행 중인 챌린지입니다.</p>
+      <div id="current-records-error" class="feedback hidden" role="alert"></div>
+      <ul id="current-record-list" class="record-list" aria-live="polite"></ul>
+    </section>
+
+    <section class="panel records" aria-labelledby="record-title">
+      <h2 id="record-title">과거 금딸 챌린지 기록</h2>
+      <div id="records-error" class="feedback hidden" role="alert"></div>
+      <ul id="past-record-list" class="record-list" aria-live="polite"></ul>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>만든놈: 내가만듦 dd</p>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
