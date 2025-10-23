@@ -1,2 +1,4 @@
 # NoFapCount
 과도한 스스로를 위로하는 행위로 인하여 몸이 지쳤습니다, 본 웹사이트는 주인장의 금딸기간을 카운트 및 기록하는 웹사이트입니다
+
+https://pigmanms.github.io/NoFapCount 
