@@ -76,7 +76,7 @@ function createRecordListItem(record, { showFailureReason = true } = {}) {
     statusBadge.textContent = "실패";
     statusBadge.classList.add("status-failed");
   } else if (hasEnded) {
-    statusBadge.textContent = "완료";
+    statusBadge.textContent = "완료"; //사실 안쓰이긴함
     statusBadge.classList.add("status-completed");
   } else {
     statusBadge.textContent = "진행 중";
@@ -176,37 +176,14 @@ function renderRecordList(targetElement, records, emptyMessage, options = {}) {
 }
 
 async function loadRecords() {
-  if (!currentRecordListEl && !pastRecordListEl) {
-    return;
-  }
-
-  clearError(currentRecordsErrorEl);
-  clearError(recordsErrorEl);
-
-  try {
-    const response = await fetch("records.json", { cache: "no-store" });
-    if (!response.ok) {
-      throw new Error(`(${response.status}) ${response.statusText}`);
-    }
-
-    const payload = await response.json();
-    const records = Array.isArray(payload?.records) ? payload.records : [];
-    const visibleRecords = records.filter((record) => !record.hidden && !record.template);
-
-    const currentRecords = visibleRecords.filter((record) => !record.failed);
-    const pastRecords = visibleRecords.filter((record) => Boolean(record.failed));
-
-    renderRecordList(
-      currentRecordListEl,
-      currentRecords,
-      "현재 진행 중인 도전이 없어요. records.json 파일에서 새로운 도전을 추가해보세요.",
+  if (!currentRecordL다. ",
       { showFailureReason: false }
     );
 
     renderRecordList(
       pastRecordListEl,
       pastRecords,
-      "아직 실패한 도전 기록이 없어요.",
+      "아직 실패한 도전 기록이 없습니다.",
       { showFailureReason: true }
     );
   } catch (error) {
